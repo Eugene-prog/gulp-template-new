@@ -1,0 +1,11 @@
+@import "colors";
+@import "fonts";
+@import "vars";
+@import "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@import "../../pug/templates/main/main";
