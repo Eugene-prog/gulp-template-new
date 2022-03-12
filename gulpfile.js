@@ -157,7 +157,11 @@ const scriptsMin = () => {
 };
 
 const libs = () => {
-  return src(["./node_modules/swiper/swiper-bundle.min.js"])
+  return src([
+    "./node_modules/object-fit-images/dist/ofi.min.js",
+    "./node_modules/svg4everybody/dist/svg4everybody.min.js",
+    "./node_modules/swiper/swiper-bundle.min.js",
+  ])
     .pipe(concat("libs.min.js"))
     .pipe(uglify())
     .pipe(dest("dist/libs/"));
@@ -214,7 +218,7 @@ const serve = () => {
   );
   watch("src/pug/components/**/*.scss", convertComponentsStyles);
   watch("src/pug/pages/**/*.scss", convertPagesStyles);
-  watch(["src/pug/static/scss/**/*.scss", "src/pug/templates/**/*.scss"], convertStaticStyles);
+  watch(["src/static/scss/**/*.scss", "src/pug/templates/**/*.scss"], convertStaticStyles);
   watch("src/static/js/**/*.js", scripts);
   watch("src/static/fonts/**/*.*", series(removeFontsFolder, copyFonts));
   watch(["!src/static/img/icons/**", "src/static/img/**/**"], copyImg);

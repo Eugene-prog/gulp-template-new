@@ -28,6 +28,8 @@
   },
   "dependencies": {
     "gulp-sourcemaps": "^3.0.0",
+    "object-fit-images": "^3.2.4",
+    "svg4everybody": "^2.1.9",
     "swiper": "^8.0.7"
   }
 }

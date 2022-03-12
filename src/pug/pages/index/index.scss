@@ -1,0 +1,10 @@
+.main-block {
+  height: 200px;
+  width: 200px;
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    @include object-fit(cover, center);
+  }
+}
